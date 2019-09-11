@@ -1,0 +1,37 @@
+
+
+
+
+  Performance statistics for Boeing sparse solver: icalls =      2
+
+ ===========================
+ = multifrontal statistics =
+ ===========================
+
+     number of equations                     =              60
+     no. of nonzeroes in lower triangle of a =              96
+     number of compressed nodes              =              59
+     no. of compressed nonzeroes in l. tri.  =              93
+     amount of workspace currently in use    =            1312
+     max. amt. of workspace used             =         1999993
+     no. of nonzeroes in the factor l        =             404.
+     number of super nodes                   =               5
+     number of compressed subscripts         =               5
+     size of stack storage                   =             142
+     maximum order of a front matrix         =              16
+     maximum size of a front matrix          =             136
+     maximum size of a front trapezoid       =             119
+     no. of floating point ops for factor    =      4.6250D+03
+     no. of floating point ops for solve     =      4.4000D+02
+     negative pivot monitoring activated
+     number of negative pivots encountered   =              0.
+     factorization panel size                =              14
+     factorization update panel size         =              14
+     solution block size                     =               2
+     number of cores used                    =               2
+     time (cpu & wall) for structure input   =        0.000000        0.000059
+     time (cpu & wall) for ordering          =        0.000000        0.000037
+     time (cpu & wall) for symbolic factor   =        0.000000        0.000005
+     time (cpu & wall) for value input       =        0.000000        0.000022
+
+     no input or output performed

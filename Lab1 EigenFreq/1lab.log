@@ -99,3 +99,36 @@ NPLOT
 /REPLOT 
 !*  
 GPLOT   
+ESHAPE,1,ON 
+/eshape,1,on
+GPLOT   
+nlist   
+/REPLOT,RESIZE  
+/REPLOT,RESIZE  
+elist   
+lab1
+/COM,ANSYS RELEASE Release 17.0      BUILD 17.0      UP20151214       13:06:42
+SET,LIST,999
+SET,,, ,,, ,1   
+PLDISP,0
+SET,NEXT
+PLDISP,2
+SET,LIST,999
+SET,,, ,,, ,3   
+PLDISP,2
+SET,NEXT
+PLDISP,2
+SET,NEXT
+PLDISP,2
+lab1
+/COM,ANSYS RELEASE Release 17.0      BUILD 17.0      UP20151214       13:10:07
+SET,LIST,999
+SET,,, ,,, ,6   
+PLDISP,2
+SET,LIST,999
+SET,,, ,,, ,5   
+PLDISP,2
+lab1
+/COM,ANSYS RELEASE Release 17.0      BUILD 17.0      UP20151214       13:15:46
+SET,LIST,999
+*get,x,mode,6,freq  
