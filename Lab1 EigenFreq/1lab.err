@@ -1,1 +1,158 @@
 /COM,ANSYS RELEASE Release 17.0      BUILD 17.0      UP20151214       12:32:57
+
+ *** WARNING ***                         CP =       5.328   TIME= 12:56:50
+ Structural elements without mid nodes usually produce much more         
+ accurate results in quad or brick shape.                                
+
+ *** WARNING ***                         CP =       6.703   TIME= 13:04:08
+ The requested number of modes is reduced from 10 to 9 since there are   
+ only 9 degrees of freedom in the model.                                 
+/COM,ANSYS RELEASE Release 17.0      BUILD 17.0      UP20151214       14:01:47
+
+ *** WARNING ***                         CP =       2.172   TIME= 14:04:07
+ Undefined parameter used for coordinate 1.                              
+  A value of 0.0 will be used.                                           
+
+ *** ERROR ***                           CP =       2.281   TIME= 14:04:07
+ Cannot create line between coincident keypoints 1 and 2.                
+
+ *** WARNING ***                         CP =       2.484   TIME= 14:04:11
+ Constraints on unmeshed keypoint 1 are not transferred.                 
+
+ *** WARNING ***                         CP =       2.484   TIME= 14:04:11
+ Forces on unmeshed keypoint 2 are not transferred.                      
+
+ *** ERROR ***                           CP =       2.500   TIME= 14:04:11
+ There are no nodes defined.                                             
+
+ *** ERROR ***                           CP =       2.578   TIME= 14:04:13
+ There are no nodes defined.                                             
+
+ *** ERROR ***                           CP =       5.625   TIME= 14:12:58
+ This function requires defined areas.                                   
+  No areas are currently defined.                                        
+
+ *** ERROR ***                           CP =       6.547   TIME= 14:16:54
+ Keypoint 2 belongs to line 1 and cannot be moved.                       
+
+ *** ERROR ***                           CP =       6.781   TIME= 14:17:15
+ Keypoint 2 belongs to line 1 and cannot be moved.                       
+
+ *** WARNING ***                         CP =       8.344   TIME= 14:18:11
+ No previous ZOOM or more than five backward ZOOMs in window 1.  The     
+ /ZOOM command is ignored.                                               
+
+ *** WARNING ***                         CP =      14.609   TIME= 14:28:49
+ The item label LOCK is not recognized by the LSEL command.              
+  The LSEL command is ignored.                                           
+
+ *** WARNING ***                         CP =      14.781   TIME= 14:29:31
+ The item label LOCK is not recognized by the LSEL command.              
+  The LSEL command is ignored.                                           
+
+ *** WARNING ***                         CP =      16.875   TIME= 14:32:45
+ Shape testing revealed that 26 of the 952 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      22.547   TIME= 14:35:55
+ Initial attempt to mesh area 5 was unsuccessful.  Automatically         
+ attempting to correct and remesh.  (5).                                 
+
+ *** WARNING ***                         CP =      24.141   TIME= 14:35:57
+ Shape testing revealed that 3 of the 3036 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      28.328   TIME= 14:36:37
+ Shape testing revealed that 26 of the 952 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      29.547   TIME= 14:40:55
+ LABA1 is not a recognized PREP7 command, abbreviation, or macro.        
+  This command will be ignored.                                          
+
+ *** ERROR ***                           CP =      29.719   TIME= 14:41:00
+ Current ANSYS geometry failed to support boolean operations.  See list  
+ error window for details.                                               
+
+ *** WARNING ***                         CP =      34.297   TIME= 14:46:57
+ Shape testing revealed that 26 of the 952 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      34.766   TIME= 14:47:16
+ Cumulative iteration 1 may have been solved using different model or    
+ boundary condition data than currently stored.  POST1 results may be    
+ erroneous unless you RESUME from a Jobname.DB file for this substep.    
+
+ *** WARNING ***                         CP =      37.312   TIME= 14:47:32
+ Cumulative iteration 2 may have been solved using different model or    
+ boundary condition data than currently stored.  POST1 results may be    
+ erroneous unless you RESUME from a Jobname.DB file for this substep.    
+
+ *** WARNING ***                         CP =      38.906   TIME= 14:48:06
+ Cumulative iteration 3 may have been solved using different model or    
+ boundary condition data than currently stored.  POST1 results may be    
+ erroneous unless you RESUME from a Jobname.DB file for this substep.    
+
+ *** WARNING ***                         CP =      39.516   TIME= 14:49:14
+ Cumulative iteration 6 may have been solved using different model or    
+ boundary condition data than currently stored.  POST1 results may be    
+ erroneous unless you RESUME from a Jobname.DB file for this substep.    
+
+ *** WARNING ***                         CP =      43.203   TIME= 14:49:44
+ Cumulative iteration 4 may have been solved using different model or    
+ boundary condition data than currently stored.  POST1 results may be    
+ erroneous unless you RESUME from a Jobname.DB file for this substep.    
+
+ *** WARNING ***                         CP =      45.141   TIME= 14:50:30
+ Shape testing revealed that 26 of the 952 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      45.234   TIME= 14:50:30
+ Previous testing revealed that 26 of the 952 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** ERROR ***                           CP =      51.250   TIME= 14:57:47
+ Current ANSYS geometry failed to support boolean operations.  See list  
+ error window for details.                                               
+
+ *** WARNING ***                         CP =      51.984   TIME= 14:57:50
+ No constraints have been defined using the D command.                   
+
+ *** ERROR ***                           CP =      53.922   TIME= 14:59:32
+ Current ANSYS geometry failed to support boolean operations.  See list  
+ error window for details.                                               
+
+ *** WARNING ***                         CP =      54.734   TIME= 14:59:37
+ No constraints have been defined using the D command.                   
+
+ *** WARNING ***                         CP =      56.484   TIME= 15:00:35
+ No constraints have been defined using the D command.                   
+
+ *** WARNING ***                         CP =      59.094   TIME= 15:00:58
+ No constraints have been defined using the D command.                   
+
+ *** WARNING ***                         CP =      60.797   TIME= 15:01:28
+ Shape testing revealed that 28 of the 1202 new or modified elements     
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      61.000   TIME= 15:01:28
+ Previous testing revealed that 28 of the 1202 selected elements violate 
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** WARNING ***                         CP =      63.203   TIME= 15:02:49
+ Shape testing revealed that 36 of the 796 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ *** WARNING ***                         CP =      63.281   TIME= 15:02:49
+ Previous testing revealed that 36 of the 796 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       

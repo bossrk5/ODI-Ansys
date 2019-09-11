@@ -1,37 +1,40 @@
 
-
-
-
-  Performance statistics for Boeing sparse solver: icalls =      2
+  Performance statistics for Boeing sparse solver: icalls =      1
 
  ===========================
  = multifrontal statistics =
  ===========================
 
-     number of equations                     =              60
-     no. of nonzeroes in lower triangle of a =              96
-     number of compressed nodes              =              59
-     no. of compressed nonzeroes in l. tri.  =              93
-     amount of workspace currently in use    =            1312
-     max. amt. of workspace used             =         1999993
-     no. of nonzeroes in the factor l        =             404.
-     number of super nodes                   =               5
-     number of compressed subscripts         =               5
-     size of stack storage                   =             142
-     maximum order of a front matrix         =              16
-     maximum size of a front matrix          =             136
-     maximum size of a front trapezoid       =             119
-     no. of floating point ops for factor    =      4.6250D+03
-     no. of floating point ops for solve     =      4.4000D+02
+     number of equations                     =            4590
+     no. of nonzeroes in lower triangle of a =          116451
+     number of compressed nodes              =             765
+     no. of compressed nonzeroes in l. tri.  =            2916
+     amount of workspace currently in use    =          802751
+     max. amt. of workspace used             =         1999995
+     no. of nonzeroes in the factor l        =          483147.
+     number of super nodes                   =             393
+     number of compressed subscripts         =           25974
+     size of stack storage                   =           82032
+     maximum order of a front matrix         =             294
+     maximum size of a front matrix          =           43365
+     maximum size of a front trapezoid       =           16736
+     no. of floating point ops for factor    =      7.3911D+07
+     no. of floating point ops for solve     =      1.5886D+06
+     actual no. of nonzeroes in the factor l =          483147.
+     actual number of compressed subscripts  =           25974
+     actual size of stack storage used       =          105513
      negative pivot monitoring activated
      number of negative pivots encountered   =              0.
-     factorization panel size                =              14
-     factorization update panel size         =              14
+     factorization panel size                =              64
+     factorization update panel size         =              32
      solution block size                     =               2
      number of cores used                    =               2
-     time (cpu & wall) for structure input   =        0.000000        0.000059
-     time (cpu & wall) for ordering          =        0.000000        0.000037
-     time (cpu & wall) for symbolic factor   =        0.000000        0.000005
-     time (cpu & wall) for value input       =        0.000000        0.000022
+     time (cpu & wall) for structure input   =        0.000000        0.006526
+     time (cpu & wall) for ordering          =        0.031250        0.003649
+     time (cpu & wall) for symbolic factor   =        0.000000        0.000400
+     time (cpu & wall) for value input       =        0.000000        0.008197
+     time (cpu & wall) for numeric factor    =        0.031250        0.015974
+     computational rate (mflops) for factor  =     2365.166304     4626.844710
+     condition number estimate               =      0.0000D+00
 
      no input or output performed

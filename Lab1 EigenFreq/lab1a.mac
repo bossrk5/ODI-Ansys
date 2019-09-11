@@ -1,0 +1,82 @@
+finish
+/clear !очистка переменных
+
+!Notepad++ Синтаксис - свой синтаксис - импорт myAPDL.xml
+
+!Начальные параметры
+E=2e11
+mu=0.3
+rho=7.7e3
+r1=140e-3
+r2=r1/3
+h=r1/120
+rad1=r1/4
+h1=0.8*r2
+
+/prep7 !препроцессор
+
+         et, 1, shell181   	!тип КЭ
+		 sectype,1,shell181
+		 secdata,h
+		 
+		 mp,ex,1,E     		!Модуль Юнга
+		 mp,prxy,1,mu  		!комментарий
+		 mp,dens,1,rho 
+		 
+		 !wprota,0,0,-90 !help/ans_cmd/Hlp_C_WPROTA.html
+						!начало коорд в центре симметрии с радиусом r1
+		 sph4,0,0,r1	!строим сплошную сферу Creates a solid spherical volume anywhere on the working plane sph4
+						!Delete Volume Only/Volume and Below
+	                    !VDELENV1, NV2, NINC
+                        !Delete volumes from NV1 to NV2 (defaults to 
+		 !wpcsys			!возвращаем
+
+		 
+		 vdele,all		!удаляем внутренности сферы help/ans_cmd/Hlp_C_VDELE.html
+						!alist 
+						!ARSCALE help/ans_cmd/Hlp_C_ARSCALE.html
+		 arscale,all,,,1,1,r2/r1,,1,1 	!масштабируем сферу
+		 cyl4,0,0,rad1,,,,r1			!вспомогательный цилиндр help/ans_cmd/Hlp_C_CYL4.html 
+		 asbv,all,all	!вычитаем цилиндр из оболочки
+		 
+		
+		 wpoffs,0,0,-h1	!смещаем рабочую плоскость
+						!рассечение плоскости help/ans_cmd/Hlp_C_ASBW.html
+		 asbw,all	!рассекаем оболочку рабочей плоскостью
+		 /view,all,-1,-1,-1 	!вектор взгляда
+						        !help/ans_cmd/Hlp_C_LSEL.html
+		 lsel,s,loc,z,-h1		!выбираем линии заделки
+		 dl,all,,all			!ЗАДЕЛКА = закрепляем все линии попавшие в выделение
+		 allsel					!сбросить выбор
+		 esize,r1/10	!размер элемента
+		 amesh,all		!сетка
+			 
+		 !mskey,2		!help/ans_cmd/Hlp_C_MSHKEY.html сетка упорядоченная дефективная в данном случае
+		 !чтобы посмотреть заделку - PlotCtrls->Symbols->OK
+		 
+		 
+		 !*return 		!выход из макроса можно в любом месте ставить
+finish 					!выход из препроцессора (из модуля в общий контекст)
+
+/solution 				!решатель
+		antype,modal 	!выбор типа анализа  - модальный
+		modopt,lanb,10	!метод Ланцоша и степ свободы (когда в каждом узле 3 степ своб - в beam3)
+
+		solve           !переносит автоматически ГУ с точек на узлы
+finish
+
+/post1 					!постпроцессор
+		!Genereal Postproc -> read result -> BY pick
+		!Plot Results -> Deformed Shape
+		!на 5ой частоте 5617 Гц - продольные колебания
+		!Смотрим изменение спектра если выберем больше элементов не 3 а 20 -> l/20 [40строка]
+		
+		
+		!расчитаем как изменится спектр если нагрузить балку растягивающей силой 100Н
+		!добавить решение задачи статики между преп и решателем
+!получение параметров: *get,x,mode,6,freq
+!Parameters->Scalar Parameters-> смотрим  X в герцах
+
+
+!Анимация
+!Read Results->By Pick->PlotCtrls->Animate->Mode Shape
