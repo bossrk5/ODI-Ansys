@@ -1,0 +1,11 @@
+/BATCH  
+/COM,ANSYS RELEASE Release 17.0      BUILD 17.0      UP20151214       12:06:22
+/input,menust,tmp,''
+/GRA,POWER
+/GST,ON
+/PLO,INFO,3
+/GRO,CURL,ON
+/CPLANE,1   
+/REPLOT,RESIZE  
+WPSTYLE,,,,,,,,0
+/REPLOT,RESIZE  
