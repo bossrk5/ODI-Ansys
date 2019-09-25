@@ -1,1 +1,35 @@
 /COM,ANSYS RELEASE Release 17.0      BUILD 17.0      UP20151214       12:06:20
+
+ *** ERROR ***                           CP =      13.344   TIME= 12:57:34
+ No dimensions set for parameter= MODE.                                  
+
+ *** ERROR ***                           CP =      13.500   TIME= 12:57:48
+ No dimensions set for parameter= MODE.                                  
+
+ *** ERROR ***                           CP =      13.547   TIME= 12:57:49
+ The above error occurred processing field= MODE(L,0,0)                  
+  Line= NSOL,2,mode(l,0,0),U,Y,UY_2,                                     
+
+ *** WARNING ***                         CP =      13.609   TIME= 12:57:51
+ The data in field 3 is invalid.  The NSOL command is ignored.           
+
+ *** ERROR ***                           CP =      14.766   TIME= 12:58:44
+ No dimensions set for parameter= MODE.                                  
+
+ *** ERROR ***                           CP =      15.141   TIME= 12:58:47
+ No dimensions set for parameter= MODE.                                  
+
+ *** ERROR ***                           CP =      15.203   TIME= 12:58:48
+ The above error occurred processing field= MODE(L,0,0)                  
+  Line= NSOL,2,mode(l,0,0),U,Y,UY_A.                                     
+
+ *** WARNING ***                         CP =      15.234   TIME= 12:58:49
+ The data in field 3 is invalid.  The NSOL command is ignored.           
+
+ *** WARNING ***                         CP =      16.406   TIME= 12:59:27
+ SHOW is not a recognized POST26 command, abbreviation, or macro.        
+  This command will be ignored.                                          
+
+ *** WARNING ***                         CP =      16.516   TIME= 12:59:27
+ SHOW is not a recognized POST26 command, abbreviation, or macro.        
+  This command will be ignored.                                          

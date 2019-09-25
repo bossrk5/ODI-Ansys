@@ -1,0 +1,75 @@
+finish
+/clear
+
+E=2e11
+mu=0.3
+rho=7.7e3
+l=82e-3
+h=2e-3
+b=h
+Fmax=1
+f0=100
+f1=2000
+
+/prep7
+		et,1,beam3   		!тип КЭ. Элемент плоской балки не может передавать кручения и выйти за плоскость
+!параметры поперечного сечения
+		r,1,h*b,b*h**3/12,h !набор вещ-х параметров
+!константы материала
+		mp,ex,1,E     		!Модуль Юнга
+		mp,prxy,1,mu  		!комментарий
+		mp,dens,1,rho 
+		 
+!Геометрия балки
+		k,1,0,0
+		k,2,l,0
+		l,1,2
+		
+!Сетка КЭ
+		esize,l/20
+		lmesh,all
+
+!Закрепления и нагрузки
+		dk,1,all 			!заделка
+		fk,2,fy,-Fmax		!help/ans_cmd/Hlp_C_FK.html VALUE - действит, VALUE2 -мнимая часть
+							!знак не важен, определяет только фазу, задали только действительную часть, чтобы картинка при t=0 совпадала с доской, задаем в таком виде -Fmax
+		!beta,1e-5			!1ый вариант с бета
+		dmprat,0.1 			!2ой вариант с кси = 1 , 0.1 , 0.01
+finish
+!plot->Symbols-> OK -включаем силу и заделку
+!Solution->Analysis Type->New Analysis
+!HARMIC or 3 Perform a harmonic analysis. Valid for structural, fluid, magnetic, and electrical degrees of freedom.
+
+/solution
+		antype,harmic
+!Solution->Load Step Opts ->Time and Substeps 
+!HARFRQ help/ans_cmd/Hlp_C_HARFRQ.html
+		harfrq,f0,f1		!выбор диапазона частот
+		nsubst,100			!число интервалов по частота
+!Analysis Type -> Analysis Options -> HROUT (формат выдачи степеней свободы): 1) печатать действит и мнимую часть по перемещ (q1, q2)
+!2) амплитуда (корень из q1^2 + q2^2 и фаза arct(q1/q2)
+		solve
+finish  					!решение во всем диапазоне по шагам
+
+/post1
+!general postproc => Read Results =>By Pick (820 берем 1ую частоту)
+!Animate=>Time Harmonic
+!TimeHist PostPro
+!+ DOF Disp – Y – выбираем точку 2
+!244 Гц пик
+
+!File-List-LogFile
+finish
+/POST26 
+		NSOL,2,node(l,0,0),U,Y,UY_A   !заполняет последовательность величин, в зависимости от шага нагружения mode - чтобы не привязанно к сетке 
+		NSOL,3,node(l/2,0,0),U,Y,UY_B
+		XVAR,1  			!по Х выбираем 1ую строчку
+		/show,png			!вывод в файл
+		/RGB,INDEX,100,100,100, 0   !цвет меняем Reverse Video
+		/RGB,INDEX, 0, 0, 0,15 
+		/gfile,1000			!разрешение
+		PLVAR,2,3			!строим вторую
+!меняем[46]100
+!help/ans_cmd/Hlp_C_PNGR.html
+		/show,close
+		/replot 			!показ картинки и в файле и на экране
